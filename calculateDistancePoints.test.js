@@ -2,7 +2,7 @@ const assert = require('assert');
 const calcDistancePoints = require('./calculateDistancePoints');
 
 describe('calcDistancePoints', () => {
-  describe('normal takeoff', () => {
+  describe('when it is asked about normal takeoff', () => {
     it('should return 63', () => {
       const actual = calcDistancePoints(99.5, 'normal', 98);
       const expected = 63;
@@ -25,7 +25,7 @@ describe('calcDistancePoints', () => {
     });
   });
 
-  describe('big takeoff', () => {
+  describe('when it is asked about the big takeoff', () => {
     it('should return 85.2', () => {
       const actual = calcDistancePoints(134, 'big', 120);
       const expected = 85.2;
@@ -48,7 +48,7 @@ describe('calcDistancePoints', () => {
     });
   });
 
-  describe('mammoth takeoff', () => {
+  describe('when it is asked about mammoth takeoff', () => {
     it('should return 153', () => {
       const actual = calcDistancePoints(227.5, 'mammoth', 200);
       const expected = 153;
